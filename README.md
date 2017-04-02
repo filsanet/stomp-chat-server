@@ -11,6 +11,9 @@ TODO
 
 * add data structure for users
 * add data structure for channels
+* implement ping/pong
+* add web ui client
+
 
 
 
