@@ -1,17 +1,15 @@
 package gmit.chatathon;
 
-import org.eclipse.jetty.websocket.api.annotations.OnWebSocketClose;
-import org.eclipse.jetty.websocket.api.annotations.OnWebSocketConnect;
+import org.eclipse.jetty.websocket.api.annotations.*;
 
 import org.eclipse.jetty.websocket.api.Session;
-import org.eclipse.jetty.websocket.api.annotations.OnWebSocketError;
-import org.eclipse.jetty.websocket.api.annotations.OnWebSocketMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  * Created by phil on 4/2/2017.
  */
+@WebSocket
 public class StompChatWebSocketHandler {
 
     public static final Logger logger = LoggerFactory.getLogger(StompChatWebSocketHandler.class);
