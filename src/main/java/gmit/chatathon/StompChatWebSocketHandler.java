@@ -33,6 +33,12 @@ public class StompChatWebSocketHandler {
 
     }
 
+    /**
+     * See https://github.com/mrstampy/Stampy/blob/master/examples/asia/stampy/examples/system/server/SystemServer.java
+     *
+     * @param user
+     * @param message
+     */
     @OnWebSocketMessage
     public void onMessage(Session user, String message) {
 
