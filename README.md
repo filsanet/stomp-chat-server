@@ -6,13 +6,13 @@ hackathon chat
 TODO
 ----
 
-* add logging (system, chat)
-* add tests
-
 * add data structure for users
 * add data structure for channels
 * implement ping/pong
 * add web ui client
+
+* add logging (system, chat, web-access)
+* add tests
 
 
 
@@ -52,3 +52,8 @@ Notes
 * Initial checkin based on 
   https://sparktutorials.github.io/2015/11/08/spark-websocket-chat.html
 
+* For web access logging, we should use logback-access.
+  * add Maven dependency
+  * logback access for JETTY: https://logback.qos.ch/access.html
+  * Config JETTY via java: http://www.eclipse.org/jetty/documentation/current/embedding-jetty.html#_like_jetty_xml
+  
