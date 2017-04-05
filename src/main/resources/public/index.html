@@ -53,10 +53,37 @@
 <div class="container">
 
   <div class="starter-template">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    <h1>Chat Server</h1>
+    <p class="lead">
+    <button data-toggle="modal" data-target="#connectModal">Connect</button>
+    </p>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-8">
+    </div>
   </div>
 
+
+  <!-- Footer i.e. Chat Controls -->
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-7">
+          <textarea class="form-control" id="chat-editor2" rows="2" style="width: 100%;"></textarea>
+        </div>
+        <div class="col-md-1">
+          <button class="btn btn-primary btn-block">Enter</button>
+
+        </div>
+      </div>
+
+    </div>
+
+  </nav>
 
   <!-- Modal -->
   <div class="modal fade" id="connectModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -89,7 +116,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary">Connect</button>
+          <button type="button" class="btn btn-primary" id="connect-to-server">Connect</button>
         </div>
       </div>
     </div>

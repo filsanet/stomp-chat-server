@@ -7,3 +7,33 @@ body {
     text-align: center;
 }
 
+#chat-input {
+    position: fixed;
+    bottom:0%;
+    width:100%;
+    padding: 15px 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+#chatControls {
+    overflow: auto;
+    margin: 0 0 5px 0
+}
+
+@media (min-width: 1200px) {
+    #chat-input {
+        width: 1170px;
+    }
+}
+@media (min-width: 992px) {
+    #chat-input {
+        width: 970px;
+    }
+}
+@media (min-width: 768px) {
+    #chat-input {
+        width: 750px;
+    }
+}
