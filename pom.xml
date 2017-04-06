@@ -79,7 +79,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>gmit.chatathon.YapChatServer</mainClass>
+                    <mainClass>gmit.chatathon.YapChatApp</mainClass>
                 </configuration>
             </plugin>
             <!--
@@ -111,7 +111,7 @@
                             </descriptorRefs>
                             <archive>
                                 <manifest>
-                                    <mainClass>gmit.chatathon.YapChatServer</mainClass>
+                                    <mainClass>gmit.chatathon.YapChatApp</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>

@@ -20,7 +20,7 @@ public class YapChatWebSocketHandler {
 
     @OnWebSocketMessage
     public void onMessage(Session client, String message) {
-        YapChatServer.echo(client, message);
+        YapChatApp.echo(client, message);
         YapFrame frame = YapFrame.parse(message);
 
         frame.getCommand().process(frame, client);
