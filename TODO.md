@@ -20,8 +20,8 @@ COMMANDS
 client-commands:
   * CONNECT nick/login/password
   * DISCONNECT
-  * SUBSCRIBE
-  * UNSUBSCRIBE
+  * JOIN
+  * LEAVE
   * SEND destination=#ch|@user
   * PONG
 
