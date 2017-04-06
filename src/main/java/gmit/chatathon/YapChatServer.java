@@ -1,9 +1,11 @@
 package gmit.chatathon;
 
+import gmit.chatathon.model.ChatUser;
 import org.eclipse.jetty.websocket.api.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Map;
@@ -14,9 +16,9 @@ import static spark.Spark.*;
 /**
  * Created by phil on 4/2/2017.
  */
-public class StompChatServer {
+public class YapChatServer {
 
-    public static final Logger logger = LoggerFactory.getLogger(StompChatServer.class);
+    public static final Logger logger = LoggerFactory.getLogger(YapChatServer.class);
 
     static Map<String, ChatUser> nickUserMap = new ConcurrentHashMap<>();
     static Map<String, HashSet<String>> channelUserMap = new ConcurrentHashMap<>();
@@ -27,7 +29,7 @@ public class StompChatServer {
         setupStaticFiles();
 
         webSocketIdleTimeoutMillis(600000);
-        webSocket("/chat", StompChatWebSocketHandler.class);
+        webSocket("/chat", YapChatWebSocketHandler.class);
         init();
 
     }
@@ -71,7 +73,7 @@ public class StompChatServer {
     }
 
     public static void sendMessageToDebugChannel(String message) {
-        StompChatServer.sendMessageToChannel("debug", "sysop", message);
+        YapChatServer.sendMessageToChannel("debug", "sysop", message);
     }
 
     public static void sendMessageToUser(String user, String sender, String message) {
@@ -101,5 +103,19 @@ public class StompChatServer {
 
     public static void removeUser(Session user) {
         // remove Session & nick from all collections.
+    }
+
+    public static void echo(Session client, String message) {
+        try {
+            client.getRemote().sendString("ECHO: " + message);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        logger.debug("--------------------");
+        logger.debug(client.getRemote().toString());
+        logger.debug(message);
+    }
+
+    public static void processConnection(Session client, YapFrame frame) {
     }
 }

@@ -1,4 +1,4 @@
-package gmit.chatathon;
+package gmit.chatathon.model;
 
 /**
  * Created by phil on 4/2/2017.
@@ -11,9 +11,9 @@ import org.eclipse.jetty.websocket.api.Session;
  * User
  * id
  * username (LDAP/other)
- * displayname
  * email
  * nick
+
  * is-identified (username checks out)
  * is-robot
  * robot-pass-key

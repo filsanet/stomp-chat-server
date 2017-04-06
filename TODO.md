@@ -1,10 +1,10 @@
 TODO
 ----
 
-* remove stampy/stomp stuff.
-
+* remove stampy/stomp stuff. done.
 * use raw websockets.
 * create a YapFrame class
+* Implement Handler for WebSocket
 
 YAPCHAT - Yet Another Protocol for CHAT
 ---
@@ -22,5 +22,11 @@ client-commands:
   * DISCONNECT
   * SUBSCRIBE
   * UNSUBSCRIBE
-  * MESSAGE destination=#ch|@user
+  * SEND destination=#ch|@user
+  * PONG
 
+server-commands:
+  * MESSAGE
+  * ERROR
+  * PING
+  * DATA(needed?)
